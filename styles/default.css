@@ -2,6 +2,9 @@
     --col-1: white;
     --col-2: black;
     --col-3: #5b0a09;
+    --fs-big: 5.5rem;
+    --fs-medium: 2.8rem;
+    --fs-small:1.5rem;
 }
 
 * {
@@ -9,47 +12,65 @@
     margin: 0;
 }
 
+.subtitle {
+    font-size: var(--fs-small);
+}
+
 body {
     height: 100dvh;
     width: 100dvw;
     position: relative;
-    /* font-family:Georgia, 'Times New Roman', Times, serif; */
-    overflow-x: hidden;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 nav {
-    position: absolute;
+    position: fixed;
+    opacity: 0.4;
     z-index: 1;
     color: black;
     background-color: var(--col-1);
     width: 100%;
-    min-height: 10em;
+    overflow: hidden;
     display: grid;
     align-content: center;
-    padding: 1em;
-
-    & .navdiv {
-        justify-self: center;
-        display: grid;
-        justify-items: center;
-    }
+    padding-block: 1.5em;
+    top: 0px;
 
     & span {
-        font-size: 1.5rem;
+        font-size: var(--fs-small);
         text-transform: uppercase;
     }
 
     & h1 {
-        font-size: 6rem;
+        font-size: var(--fs-big);
     }
+}
+
+.navdiv {
+    justify-self: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition-timing-function: ease-out;
+    transition-duration: .3s;
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.subtitle {
+    cursor: unset;
 }
 
 .cont {
     display: grid;
     gap: .2em;
-    position: relative;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    width: 100dvw;
     background-color: var(--col-1);
     z-index: 0;
 
@@ -71,13 +92,14 @@ nav {
     background-color: var(--col-2);
 }
 
+.right {
+    background-color: var(--col-2);
+}
+
 .left, .right {
     position: relative;
     cursor: pointer;
-}
-
-.right {
-    background-color: var(--col-2);
+    overflow: hidden;
 }
 
 .h-logo-large {
@@ -89,16 +111,20 @@ nav {
 }
 
 .left-img, .right-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.2;
+    opacity: 0.12;
 }
 
 .left-text, .right-text {
     position: absolute;
-    top: 50%;
-    left: calc(50% - 50px);
+    top: calc(50% - 26px);
     color: var(--col-1);
-    font-size: 3rem;
+    font-size: var(--fs-medium);
+}
+
+.left-text {
+    left: calc(50% - 72px);
+}
+
+.right-text {
+    left: calc(50% - 119px);
 }

@@ -6,32 +6,36 @@
     <title>BK Fru • Portfolio</title>
 
     <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/mobile.css"  media="screen and (max-width: 700px)">
+    <link rel="stylesheet" href="styles/mobile.css"  media="screen and (max-width: 600px)">
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
+        <div class="nav-left">
+
+        </div>
         <div class="navdiv">
             <h1 class="name">
                 BK Fru
             </h1>
             <span class="subtitle">Multimedia artist</span>
         </div>
+        <div class="nav-right">
+
+        </div>
     </nav>
 
     <div class="cont">
         <div class="left">
             <span class="left-text">Digital</span>
-            <img src="images/art/digital/Image.jpeg" alt="" class="left-img">
+            <img src="images/art/digital/Image.jpeg" alt="digital art" class="left-img">
         </div>
-        <!-- <div class="h-logo-large">
-            <img src="images/art/digital/Image.jpeg" alt="">
-        </div> -->
         <div class="right">
             <span class="right-text">Traditional</span>
-            <img src="images/art/paintings/painting1.png" alt="" class="right-img">
+            <img src="images/art/paintings/painting1.png" alt="traditional art" class="right-img">
         </div>
     </div>
 
-    <script src="out/main.js"></script>
+    <script src="out/util.js"></script> <!-- util needs to be loaded first -->
+    <script src="out/home.js"></script>
 </body>
 </html>

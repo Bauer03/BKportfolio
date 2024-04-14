@@ -1,0 +1,18 @@
+:root {
+    --fs-big: 12vmin;
+    --fs-medium: 8vmin;
+    --fs-small: 5vmin;
+}
+
+.navdiv {
+    gap: .5em;
+}
+
+.cont {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &:not(.hovering-left,.hovering-right) {
+        grid-template-columns: 1fr;
+     }
+}
