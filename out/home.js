@@ -4,7 +4,6 @@ let rightImg = document.querySelector(".right-img");
 let cont = document.querySelector(".cont");
 let leftText = document.querySelector(".left-text");
 let rightText = document.querySelector(".right-text");
-let navbar = document.querySelector(".navbar");
 let leftCont = document.querySelector(".left");
 let rightCont = document.querySelector(".right");
 cont.style.top = (navbar.getBoundingClientRect().height) + "px";

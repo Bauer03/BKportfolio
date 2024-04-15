@@ -5,6 +5,7 @@
     --fs-big: 5.5rem;
     --fs-medium: 2.8rem;
     --fs-small:1.5rem;
+    --mat-symb: 3rem;
 }
 
 * {
@@ -23,20 +24,21 @@ body {
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-nav {
+.navbar {
     position: fixed;
-    opacity: 0.4;
     z-index: 1;
     color: black;
     background-color: var(--col-1);
     width: 100%;
     overflow: hidden;
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     align-content: center;
-    padding-block: 1.5em;
     top: 0px;
+    padding-block: 1em;
+    animation: fade-in-down .6s ease-out;
 
-    & span {
+    & .subtitle {
         font-size: var(--fs-small);
         text-transform: uppercase;
     }
@@ -46,19 +48,60 @@ nav {
     }
 }
 
+@keyframes fade-in-down {
+    from {
+        transform: translateY(-10%);
+        opacity: .7;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }    
+}
+
+.nav-right, .nav-left {
+    position:absolute;
+}
+
+.nav-left {
+    left: 2em;
+    top: 2em;
+    transform: translateY(-50%);
+}
+
+.nav-right {
+    transform: translateY(-50%) scale(1);
+    right: 2em;
+    top: 2em;
+    transition: all .2s ease-out;
+
+    &:hover {
+        transform: translateY(-50%) scale(1.1);
+    }
+}
+
+.material-symbols-outlined {
+    font-size: var(--mat-symb) !important;
+    cursor:pointer;
+}
+
+.logo-small {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+
 .navdiv {
-    justify-self: center;
+    flex-grow: 1;
     display: grid;
     align-items: center;
     justify-items: center;
     transition-timing-function: ease-out;
     transition-duration: .3s;
-    cursor: pointer;
     user-select: none;
-    transform: scale(1);
-
-    &:hover {
-        transform: scale(1.02);
+    > * {
+        cursor: pointer;
     }
 }
 
@@ -119,6 +162,19 @@ nav {
     top: calc(50% - 26px);
     color: var(--col-1);
     font-size: var(--fs-medium);
+    animation: fade-in-up .6s ease-out;
+}
+
+@keyframes fade-in-up {
+    from {
+        transform: translateY(10px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
 }
 
 .left-text {

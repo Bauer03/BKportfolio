@@ -16,3 +16,21 @@
         grid-template-columns: 1fr;
      }
 }
+
+.nav-left {
+    left: 1em;
+    top: 1em;
+    transform: translateY(-50%);
+}
+
+.nav-right {
+    right: 1em;
+    top: 1em;
+}
+
+.logo-small {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    filter: grayscale(1);
+}

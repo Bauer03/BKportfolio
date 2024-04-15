@@ -3,7 +3,6 @@ let rightImg = document.querySelector(".right-img") as HTMLImageElement;
 let cont = document.querySelector(".cont") as HTMLElement;
 let leftText = document.querySelector(".left-text") as HTMLElement;
 let rightText = document.querySelector(".right-text") as HTMLElement;
-let navbar = document.querySelector(".navbar") as HTMLElement;
 let leftCont = document.querySelector(".left") as HTMLElement;
 let rightCont = document.querySelector(".right") as HTMLElement;
 
