@@ -36,3 +36,12 @@ rightImg.addEventListener("click", () => {
     location.href = "traditional.html";
 });
 cont.style.height = window.innerHeight - navbar.getBoundingClientRect().height + "px";
+// Get the logo to follow the left hand div as it animates to the left or right.
+let movingLogo = document.querySelector(".logo-large");
+let leftRect;
+function animate() {
+    leftRect = leftCont.getBoundingClientRect();
+    movingLogo.style.left = `${leftRect.right}px`;
+    requestAnimationFrame(animate);
+}
+animate();

@@ -2,6 +2,7 @@
     --fs-big: 12vmin;
     --fs-medium: 8vmin;
     --fs-small: 5vmin;
+    --mat-symb: 10vmin !important;
 }
 
 .navdiv {
@@ -15,6 +16,10 @@
     &:not(.hovering-left,.hovering-right) {
         grid-template-columns: 1fr;
      }
+}
+
+.logo-large {
+    display: none;
 }
 
 .nav-left {
@@ -32,5 +37,4 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    filter: grayscale(1);
 }

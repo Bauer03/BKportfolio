@@ -5,7 +5,7 @@
     --fs-big: 5.5rem;
     --fs-medium: 2.8rem;
     --fs-small:1.5rem;
-    --mat-symb: 3rem;
+    --mat-symb: 4rem;
 }
 
 * {
@@ -22,6 +22,7 @@ body {
     width: 100dvw;
     position: relative;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -36,7 +37,7 @@ body {
     align-content: center;
     top: 0px;
     padding-block: 1em;
-    animation: fade-in-down .6s ease-out;
+    animation: fade-in-down 1s ease-out;
 
     & .subtitle {
         font-size: var(--fs-small);
@@ -51,12 +52,27 @@ body {
 @keyframes fade-in-down {
     from {
         transform: translateY(-10%);
-        opacity: .7;
+        opacity: 0;
     }
     to {
         transform: translateY(0);
         opacity: 1;
     }    
+}
+
+.nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    color: red;
+    transform: translateX(-100%);
+
+    &:not(.closed) {
+        background-color: red;
+        border-radius: 3px;
+        transform: translateX(0);
+    }
 }
 
 .nav-right, .nav-left {
@@ -83,13 +99,14 @@ body {
 .material-symbols-outlined {
     font-size: var(--mat-symb) !important;
     cursor:pointer;
+    user-select: none;
 }
 
 .logo-small {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    filter: grayscale(1);
+    filter: invert();
 }
 
 .navdiv {
@@ -116,7 +133,7 @@ body {
     width: 100dvw;
     background-color: var(--col-1);
     z-index: 0;
-
+    top: 10em;
     transition: grid-template-columns 1s ease-in-out;
 
     &:not(.hovering-left,.hovering-right) {
@@ -129,6 +146,16 @@ body {
     &.hovering-right {
         grid-template-columns: 2fr 3fr;
     }
+}
+
+.logo-large {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .left {
@@ -145,14 +172,6 @@ body {
     overflow: hidden;
 }
 
-.h-logo-large {
-    & img {
-        height: 120px;
-        width: 120px;
-        border-radius: 50%;
-    }
-}
-
 .left-img, .right-img {
     opacity: 0.12;
 }
@@ -162,19 +181,18 @@ body {
     top: calc(50% - 26px);
     color: var(--col-1);
     font-size: var(--fs-medium);
-    animation: fade-in-up .6s ease-out;
+    animation: fade-in-up 1s ease-out;
 }
 
 @keyframes fade-in-up {
     from {
         transform: translateY(10px);
-        opacity: .0;
+        opacity: 0;
     }
     to {
         transform: translateY(0);
         opacity: 1;
     }
-    
 }
 
 .left-text {
