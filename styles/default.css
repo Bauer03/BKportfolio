@@ -1,7 +1,9 @@
 :root {
+    /* Color scheme manipulated using these values. Change to affect whole site */
     --col-1: white;
     --col-2: black;
     --col-3: #5b0a09;
+
     --fs-big: 5.5rem;
     --fs-medium: 2.8rem;
     --fs-small:1.5rem;
@@ -106,7 +108,7 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    filter: invert();
+    filter: invert(); /* Delete this line once color scheme is decided */
 }
 
 .navdiv {
