@@ -37,7 +37,7 @@ if (body.getBoundingClientRect().width < 600) isMobile = true;
 else isMobile = false;
 
 bkHeader.addEventListener("click", () => {
-    location.href = '/';
+    location.href = './';
 })
 
 smallLogo.style.top = (navbar.getBoundingClientRect().height / 2) + "px";
