@@ -8,6 +8,7 @@
     --fs-medium: 2.8rem;
     --fs-small:1.5rem;
     --mat-symb: 4rem;
+    overflow: hidden;
 }
 
 * {
