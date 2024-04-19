@@ -6,11 +6,19 @@
     --mat-symb: 10vmin !important;
 }
 
+body {
+    overflow: hidden;
+}
+
 .navdiv {
     gap: .5em;
 }
 
-.cont {
+.d-elm {
+    max-width: 80dvw;
+}
+
+.cont:not(.digital) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 
@@ -38,4 +46,8 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
+}
+
+.left-img {
+    transform: scale(1);
 }

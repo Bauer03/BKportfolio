@@ -1,12 +1,14 @@
 let leftImg = document.querySelector(".left-img") as HTMLImageElement;
 let rightImg = document.querySelector(".right-img") as HTMLImageElement;
-let cont = document.querySelector(".cont") as HTMLElement;
 let leftText = document.querySelector(".left-text") as HTMLElement;
 let rightText = document.querySelector(".right-text") as HTMLElement;
 let leftCont = document.querySelector(".left") as HTMLElement;
+let cont = document.querySelector(".cont") as HTMLElement;
 let rightCont = document.querySelector(".right") as HTMLElement;
 
 cont.style.top = (navbar.getBoundingClientRect().height) + "px";
+cont.style.height = window.innerHeight - navbar.getBoundingClientRect().height + "px";
+
 
 if(isMobile) {
     leftText.style.left = (cont.getBoundingClientRect().width / 2) - (leftText.getBoundingClientRect().width / 2) + "px";
@@ -38,8 +40,6 @@ leftImg.addEventListener("click", () => {
 rightImg.addEventListener("click", () => {
     location.href = "traditional.html";
 });
-
-cont.style.height = window.innerHeight - navbar.getBoundingClientRect().height + "px";
 
 // Get the logo to follow the left hand div as it animates to the left or right.
 let movingLogo = document.querySelector(".logo-large") as HTMLElement;

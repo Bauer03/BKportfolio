@@ -1,0 +1,41 @@
+.traditional-cont{
+    /* In typescript, height is set using window height - navbar height. */
+    /* In typescript, 'top' is set using navbar height. */
+    display: grid;
+    place-content: center;
+    position: absolute;
+    width: 100dvw;
+    max-width: 100dvw;
+    grid-template-rows: auto;
+    align-content: start;
+    gap: 4em;
+    justify-content: center;
+    position: relative;
+    margin-top: 4em;
+}
+
+.t-elm {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 60dvw;
+    padding: 2.5em;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    opacity: 1;
+    transform: scale(1);
+
+    transition: opacity 0.3s ease-in-out, border-radius 0.1s ease-in-out, transform 0.1s ease-out;
+    user-select: none;
+
+    font-size: var(--fs-small);
+
+    &:hover {
+        transform: scale(1.02);
+        opacity: .6;
+        border-radius: 8px;
+    }
+}

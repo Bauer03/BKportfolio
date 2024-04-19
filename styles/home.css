@@ -1,0 +1,15 @@
+.cont {
+    transition: grid-template-columns 1s ease-in-out;
+    gap: .2em;
+
+    &:not(.hovering-left,.hovering-right) {
+       grid-template-columns: 1fr 1fr;
+    }
+
+    &.hovering-left {
+        grid-template-columns: 3fr 2fr;
+    }
+    &.hovering-right {
+        grid-template-columns: 2fr 3fr;
+    }
+}

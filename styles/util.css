@@ -33,6 +33,7 @@ body {
     color: black;
     background-color: var(--col-1);
     width: 100%;
+    max-width: 100dvw;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -62,18 +63,47 @@ body {
     }    
 }
 
+.nav-toggle {
+    transform: rotate(0deg);
+    transition: transform .3s cubic-bezier(0, 0.01, 0, 1);
+
+    &.open {
+        transform: rotate(90deg);
+    }
+}
+
 .nav-menu {
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 4em;
-    color: red;
-    transform: translateX(-100%);
+    gap: 2em;
 
-    &:not(.closed) {
-        background-color: red;
-        border-radius: 3px;
-        transform: translateX(0);
+    top: 0px;
+    right: 0px;
+
+    background-color: rgba(255, 255, 255, 0.344);
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    font-size: var(--fs-small);
+
+    /* width: max-content; */
+    height: auto;
+    z-index: 2;
+    padding: 1em;
+    border-radius: 3px;
+
+    transition: transform .4s ease-out;
+
+    &.onload { /* Used so that I can compute getBoundingClientRect() of navbar without this influencing the result */
+        display: none;
+    }
+
+    &.closed {
+        transform: translateX(300px);
+    }
+
+    >:hover {
+        cursor: pointer;
     }
 }
 
@@ -90,12 +120,8 @@ body {
 .nav-right {
     transform: translateY(-50%) scale(1);
     right: 2em;
-    top: 2em;
+    top: 60px;
     transition: all .125s ease-out;
-
-    &:hover {
-        transform: translateY(-50%) scale(1.1);
-    }
 }
 
 .material-symbols-outlined {
@@ -109,6 +135,7 @@ body {
     width: 100px;
     border-radius: 50%;
     filter: invert(); /* Delete this line once color scheme is decided */
+    top: 1em;
 }
 
 .navdiv {
@@ -130,24 +157,11 @@ body {
 
 .cont {
     display: grid;
-    gap: .2em;
     position: absolute;
-    width: 100dvw;
+    max-width: 100dvw;
     background-color: var(--col-1);
     z-index: 0;
     top: 10em;
-    transition: grid-template-columns 1s ease-in-out;
-
-    &:not(.hovering-left,.hovering-right) {
-       grid-template-columns: 1fr 1fr;
-    }
-
-    &.hovering-left {
-        grid-template-columns: 3fr 2fr;
-    }
-    &.hovering-right {
-        grid-template-columns: 2fr 3fr;
-    }
 }
 
 .logo-large {
@@ -172,6 +186,10 @@ body {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+}
+
+.left-img {
+    transform: scale(1.5); /* 'temporary' fix because aspect-ratio is off. */
 }
 
 .left-img, .right-img {
