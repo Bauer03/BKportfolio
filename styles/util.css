@@ -8,12 +8,15 @@
     --fs-medium: 2.8rem;
     --fs-small:1.5rem;
     --mat-symb: 4rem;
-    overflow: hidden;
 }
 
 * {
     padding: 0;
     margin: 0;
+}
+
+html {
+    overflow: hidden;
 }
 
 .subtitle {
@@ -25,7 +28,7 @@ body {
     width: 100dvw;
     position: relative;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .navbar {
@@ -41,7 +44,7 @@ body {
     align-content: center;
     top: 0px;
     padding-block: 1em;
-    animation: fade-in-down 1s ease-out;
+    animation: fade-in-down .8s ease-out;
 
     & .subtitle {
         font-size: var(--fs-small);
@@ -77,12 +80,13 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    color: white;
+    cursor: pointer;
 
     top: 0px;
-    right: 0px;
+    right: 1em;
 
-    background-color: rgba(255, 255, 255, 0.344);
+    background-color: rgba(100, 100, 100, 0.344);
     backdrop-filter: blur(10px);
     --webkit-backdrop-filter: blur(10px);
     font-size: var(--fs-small);
@@ -90,21 +94,24 @@ body {
     /* width: max-content; */
     height: auto;
     z-index: 2;
-    padding: 1em;
+    /* padding: 1em; */
     border-radius: 3px;
 
     transition: transform .4s ease-out;
 
-    &.onload { /* Used so that I can compute getBoundingClientRect() of navbar without this influencing the result */
+    & > * {
+        padding: 1em;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &.onload { /* Used so that I can compute getBoundingClientRect() of .navbar without the height of .nav-menu influencing the result */
         display: none;
     }
 
     &.closed {
-        transform: translateX(300px);
-    }
-
-    >:hover {
-        cursor: pointer;
+        transform: translateX(calc(100% + 1em));
     }
 }
 
