@@ -30,7 +30,23 @@
 
     &.open {
         grid-template-rows: min-content 1fr;
+        .event-bottom {
+            padding-block: 1em;
+        }
     }
+    
+    &:not(.open) {
+        .event-bottom {
+            cursor: pointer;
+            overflow: hidden;
+            padding-block: 0em;
+        }
+    }
+}
+
+.event-bottom {
+    transition: padding 0.3s ease, height 0.3s ease;
+    padding-inline: 1em;
 }
 
 .event-top {
@@ -40,8 +56,4 @@
     align-content: center;
     font-size: var(--fs-medium);
     padding-inline: .5em;
-}
-
-.event-bottom {
-    overflow: hidden;
 }
