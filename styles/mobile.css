@@ -1,7 +1,7 @@
 :root {
     /* Not sure if vmin is used correctly here, but it helps make things work on really small screens (without me having to media query). */
     --fs-big: 12vmin;
-    --fs-medium: 8vmin;
+    --fs-medium: 7vmin;
     --fs-small: 5vmin;
     --mat-symb: 10vmin !important;
 }
