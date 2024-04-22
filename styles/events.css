@@ -1,6 +1,6 @@
 .events-cont{
-    /* In typescript, height is set using window height - navbar height. */
-    /* In typescript, 'top' is set using navbar height. */
+    /* In typescript, min-height of this cont is defined using window height - navbar height. */
+    /* In typescript, 'top' offset is defined using navbar height. */
 
     display: flex;
     flex-direction: column;
@@ -11,6 +11,7 @@
     
     gap: 2em;
     margin-top: 2em;
+    margin-bottom: 2em;
     
     position: absolute;
 }
@@ -19,12 +20,14 @@
     display: grid;
     grid-template-rows: min-content 0fr;
     overflow-x: hidden;
+    max-width: 80dvw;
     width: 60dvw;
     color: var(--col-1);
     background-color: var(--col-2);
     border-radius: 3px;
-    /* align-content: center; going to leave this here commented out so i remember: DO NOT USE THIS or grid transition breaks */
+    /* align-content: center; going to leave this here (commented out) so i remember: DO NOT USE or grid transition breaks */
     padding: 1em;
+    padding-block: 2em;
     transition: grid-template-rows 0.3s ease;
     cursor: pointer;
 
@@ -45,6 +48,7 @@
     img {
         max-width: 100%;
         overflow: hidden;
+        /* object-fit: contain; */
     }
 }
 
@@ -54,6 +58,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow-x: hidden;
+    cursor: auto;
+    user-select: none;
 }
 
 .event-desc {

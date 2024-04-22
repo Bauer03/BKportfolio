@@ -58,11 +58,13 @@ body {
 
 .event-desc {
     padding: 0em;
-    padding-block-start: 1em;
+    padding-block-start: 2em;
+    padding-inline: 1em;
 }
 
 .event-bottom {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+    padding: 0;
 }

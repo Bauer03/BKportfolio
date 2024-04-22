@@ -28,7 +28,7 @@ body {
     width: 100dvw;
     position: relative;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar {
