@@ -18,35 +18,47 @@
 .event {
     display: grid;
     grid-template-rows: min-content 0fr;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 60dvw;
     color: var(--col-1);
     background-color: var(--col-2);
     border-radius: 3px;
-    align-content: center;
+    /* align-content: center; going to leave this here commented out so i remember: DO NOT USE THIS or grid transition breaks */
     padding: 1em;
-
     transition: grid-template-rows 0.3s ease;
+    cursor: pointer;
 
     &.open {
         grid-template-rows: min-content 1fr;
+
         .event-bottom {
-            padding-block: 1em;
-        }
-    }
-    
-    &:not(.open) {
-        .event-bottom {
-            cursor: pointer;
-            overflow: hidden;
-            padding-block: 0em;
+            padding-block: 2em;
         }
     }
 }
 
+.event-image-gallery {
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    
+    img {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
 .event-bottom {
-    transition: padding 0.3s ease, height 0.3s ease;
+    transition: padding 0.3s ease;
     padding-inline: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-x: hidden;
+}
+
+.event-desc {
+    padding: 1em;
+    font-size: var(--fs-small);
 }
 
 .event-top {

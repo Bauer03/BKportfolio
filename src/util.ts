@@ -7,6 +7,31 @@ let navRight = document.querySelector(".nav-right") as HTMLElement;
 let navbar = document.querySelector(".navbar") as HTMLElement;
 let isMobile:boolean;
 
+interface ArtEvent {
+    title:String;
+    desc:String;
+    images:String[];
+}
+
+let events: ArtEvent[] = [
+    {
+        title: "LuminoCity",
+        desc: "This is the description of the event. It will be a paragraph or two long, and will describe the event in some detail.",
+        images: [
+            'images/art/digital/Image.jpeg', // To add more images to an event, add the image to the 'images' folder and add the path on a new line.
+            'images/art/paintings/painting1.png',
+        ],
+    },
+    {
+        title: "Art Show",
+        desc: "This is the description of the event. It will be a paragraph or two long, and will describe the event in some detail.",
+        images: [
+            'images/art/digital/Image.jpeg',
+            'images/art/paintings/painting1.png',
+        ],
+    },
+];
+
 let navMenu:HTMLElement = document.createElement("div");
 navMenu.className = "nav-menu closed onload";
 navMenu.innerHTML = `

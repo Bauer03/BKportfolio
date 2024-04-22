@@ -7,6 +7,24 @@ let navToggle = document.querySelector(".nav-toggle");
 let navRight = document.querySelector(".nav-right");
 let navbar = document.querySelector(".navbar");
 let isMobile;
+let events = [
+    {
+        title: "LuminoCity",
+        desc: "This is the description of the event. It will be a paragraph or two long, and will describe the event in some detail.",
+        images: [
+            'images/art/digital/Image.jpeg',
+            'images/art/paintings/painting1.png',
+        ],
+    },
+    {
+        title: "Art Show",
+        desc: "This is the description of the event. It will be a paragraph or two long, and will describe the event in some detail.",
+        images: [
+            'images/art/digital/Image.jpeg',
+            'images/art/paintings/painting1.png',
+        ],
+    },
+];
 let navMenu = document.createElement("div");
 navMenu.className = "nav-menu closed onload";
 navMenu.innerHTML = `
