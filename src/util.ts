@@ -7,10 +7,10 @@ let navRight = document.querySelector(".nav-right") as HTMLElement;
 let navbar = document.querySelector(".navbar") as HTMLElement;
 let isMobile:boolean;
 
-interface ArtEvent {
-    title:String;
-    desc:String;
-    images:String[];
+type ArtEvent = {
+    title:string;
+    desc:string;
+    images:string[];
 }
 
 let events: ArtEvent[] = [

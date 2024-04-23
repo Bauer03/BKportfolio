@@ -1,7 +1,7 @@
 :root {
     /* Color scheme manipulated using these values. Change to affect whole site */
     --col-1: white;
-    --col-2: black;
+    --col-2: rgb(26, 26, 26);
     --col-3: #5b0a09;
 
     --fs-big: 5.5rem;
@@ -23,6 +23,18 @@ html {
     font-size: var(--fs-small);
 }
 
+.fs-lg {
+    font-size: var(--fs-big);
+}
+
+.fs-md {
+    font-size: var(--fs-medium);
+}
+
+.fs-sm {
+    font-size: var(--fs-small);
+}
+
 body {
     height: 100dvh;
     width: 100dvw;
@@ -34,7 +46,7 @@ body {
 .navbar {
     position: fixed;
     z-index: 1;
-    color: black;
+    color: var(--col-2);
     background-color: var(--col-1);
     width: 100%;
     max-width: 100dvw;
@@ -80,7 +92,7 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--col-1);
     cursor: pointer;
 
     top: 0px;

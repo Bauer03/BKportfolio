@@ -1,4 +1,3 @@
 "use strict";
-// Made this a separate file in case I add stuff to it later.
-// For now, it just makes it easier for me to calculate the height of the navbar, because of how I created it.
+// Add in every html file, linked after other script files. Makes my getBoundingClientRect() stuff function as I want it to.
 navMenu.classList.remove("onload");

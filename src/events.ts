@@ -52,17 +52,17 @@ function getEventHTML(evt:ArtEvent) {
     right.addEventListener("click", (event) => {
         imageIndex = imageIndex < (evt.images.length - 1) ? imageIndex + 1 : 0;
         swapImg(img,evt.images[imageIndex]);
-    })
+    });
 
     let left = temp.querySelector(".go-left") as HTMLElement;
     left.addEventListener("click", (event) => {
         imageIndex = imageIndex > 0 ? imageIndex - 1 : (evt.images.length - 1);
         swapImg(img,evt.images[imageIndex]);
-    })
+    });
 
     return temp;
 }
 
-function swapImg(img:HTMLImageElement,imgURL:String) {
-    img.src = imgURL as string;
+function swapImg(img:HTMLImageElement,imgURL:string) {
+    img.src = imgURL;
 }

@@ -7,7 +7,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navdiv {
@@ -67,4 +67,26 @@ body {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     padding: 0;
+}
+
+.a-cont-inner {
+    width: 90dvw;
+    margin-top: 1em;
+    gap: 2em;
+}
+
+.a-top {
+    flex-direction: column;
+}
+
+.a-top-left {
+    height: 80vmin;
+}
+
+.a-top-right {
+    gap: 1em;
+}
+
+.a-bottom {
+    gap: 1em;
 }
