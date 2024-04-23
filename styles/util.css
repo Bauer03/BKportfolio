@@ -24,15 +24,15 @@ html {
 }
 
 .fs-lg {
-    font-size: var(--fs-big) !important;
+    font-size: var(--fs-big);
 }
 
 .fs-md {
-    font-size: var(--fs-medium) !important;
+    font-size: var(--fs-medium);
 }
 
 .fs-sm {
-    font-size: var(--fs-small) !important;
+    font-size: var(--fs-small);
 }
 
 body {

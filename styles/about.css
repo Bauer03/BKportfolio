@@ -79,17 +79,19 @@
         z-index: 0;
         
         &:hover {
-            width: 120px;
+            width: 130px;
             
             &::after {
                 content: 'open_in_new';
                 position: absolute;
-                top: 20px;
-                transform: scale(0.5) translateY(-50%);
-                right: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
                 color: var(--col-1);
                 opacity: 1;
                 z-index: -1;
+                font-weight: bold;
+                font-size: var(--fs-medium);
             }
         }
     }
