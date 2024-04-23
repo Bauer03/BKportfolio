@@ -90,3 +90,7 @@ body {
 .a-bottom {
     gap: 1em;
 }
+
+.a-email {
+    padding-block: 1em;
+}
