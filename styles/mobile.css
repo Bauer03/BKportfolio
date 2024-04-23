@@ -72,7 +72,7 @@ body {
 .a-cont-inner {
     width: 90dvw;
     margin-top: 1em;
-    gap: 2em;
+    gap: 4em;
 }
 
 .a-top {
@@ -84,7 +84,7 @@ body {
 }
 
 .a-top-right {
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .a-bottom {

@@ -63,6 +63,36 @@
 .a-icons {
     display: flex;
     gap: 1em;
+    align-items: center;
+
+    a {
+        border-radius: 8px;
+        background-color: black;
+        transition: width 0.3s ease;
+        width: 70px;
+        height: 80px;
+        display: grid;
+        place-items: center;
+        padding-left: 10px;
+        justify-content: start;
+        position: relative;
+        z-index: 0;
+        
+        &:hover {
+            width: 120px;
+            
+            &::after {
+                content: 'open_in_new';
+                position: absolute;
+                top: 20px;
+                transform: scale(0.5) translateY(-50%);
+                right: 0px;
+                color: var(--col-1);
+                opacity: 1;
+                z-index: -1;
+            }
+        }
+    }
 }
 
 .a-icon {
