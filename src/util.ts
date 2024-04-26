@@ -70,7 +70,7 @@ else isMobile = false;
 if(!isMobile) {
     document.addEventListener("keydown", (e) => {
         if(e.key === "Escape" && menuOpen) closeMenu();
-    })
+    });
 }
 
 bkHeader.addEventListener("click", () => {

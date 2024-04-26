@@ -40,3 +40,41 @@
         border-radius: 8px;
     }
 }
+
+.t-art-cont {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.t-img-cont {
+    width: 200px;
+}
+
+.t-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.t-images {
+    display: flex;
+}
+
+.t-project-cont {
+
+    &.has-projects {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 1em;
+    }
+
+    &.no-projects {
+        display: flex;
+        gap: 2em;
+    }
+}
+
+.traditional-cont {
+    &.displaying {
+        display: flex;
+    }
+}

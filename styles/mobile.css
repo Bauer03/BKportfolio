@@ -85,6 +85,7 @@ body {
 
 .a-top-right {
     gap: 1.5em;
+    align-items: start;
 }
 
 .a-bottom {
@@ -93,4 +94,9 @@ body {
 
 .a-email {
     padding-block: 1em;
+}
+
+.t-images {
+    display: flex;
+    flex-direction: column;
 }

@@ -21,6 +21,7 @@
     display: flex;
     gap: 2em;
     background-color: var(--col-1);
+    justify-content: space-between;
 }
 
 .a-top-left {
@@ -42,6 +43,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .a-bottom {
@@ -100,4 +102,10 @@
 .a-icon {
     height: 60px;
     width: auto;
+}
+
+.a-bottom-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
